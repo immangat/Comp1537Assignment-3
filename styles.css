@@ -1,0 +1,367 @@
+
+body {
+
+
+    margin: 2%;
+}
+
+
+
+.container{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50% 40% 10%;
+    grid-template-areas: 
+    "header header header header header"
+    "content2 content3 content4 content5 content6"
+    "footer footer footer footer footer";
+    grid-gap: 0.2rem;
+    text-align: center;
+}
+
+header{
+    display:grid;
+    height:100%;
+    grid-area: header;
+    border-radius: 20px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 35% 65%;
+    grid-template-areas: 
+    "logo banner"
+    "SideBar banner";
+    grid-gap: 0.2rem;
+   
+}
+
+
+
+
+
+
+#logo{
+    grid-area: logo;
+
+
+}
+
+#Banner{
+
+    background-color: rgb(10, 233, 95);
+    grid-area: banner;
+
+}
+#Banner img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+
+#logo img {
+    width: 100%;
+    height: 100%;
+    align-items: left;
+  }
+
+
+#SideBar{
+    display: grid;
+    height: 100%;
+    background-color: rgb(105, 61, 134);
+    grid-area: SideBar;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas: 
+    "img1 SBT1"
+    "img2 SBT2"
+    "img3 SBT3"
+    "img4 SBT4"
+    "img5 SBT5";
+}
+
+
+#SideBar img{
+
+    height: 100%;
+    width: 100%;
+
+}
+
+.SBT{
+    
+    font-size: 24px;
+    text-align: left;
+    place-self: center start;
+    padding: 2%;
+
+}
+
+   #img1{
+        grid-area: img1;
+    }
+
+    #img2{
+        grid-area: img2;
+    }
+
+
+    #img3{
+        grid-area: img3;
+    }
+
+
+    #img4{
+        grid-area: img4;
+    }
+
+
+    #img5{
+        grid-area: img5;
+    }
+
+
+    #SBT1{
+        grid-area: SBT1;
+    }
+
+    #SBT2{
+        grid-area: SBT2;
+    }
+
+
+    #SBT3{
+        grid-area: SBT3;
+    }
+
+
+    #SBT4{
+        grid-area: SBT4;
+    }
+
+
+    #SBT5{
+        grid-area: SBT5;
+    }
+
+
+
+#NavC1{
+    grid-area: NavC1;
+    
+}
+
+#NavC2{
+    grid-area: NavC2;
+    
+}
+
+
+#NavC3{
+    grid-area: NavC3;
+   ;
+
+}
+
+
+#NavC4{
+    grid-area: NavC4;
+    
+}
+
+
+#NavC5{
+    grid-area: NavC5;
+    
+}
+
+
+
+
+
+
+
+#content2{
+
+    background-color: red;
+    grid-area: content2;
+}
+
+#content3{
+
+    background-color: green;
+    grid-area: content3;
+}
+
+#content4{
+
+    background-color:orange;
+    grid-area: content4;
+}
+
+#content5{
+
+    background-color: pink;
+    grid-area: content5;
+}
+
+#content6{
+
+    background-color: yellow;
+    grid-area: content6;
+}
+
+#footer{
+
+    background-color: purple;
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 1601px){
+
+
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: 1281px){
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50% 40% 10%;
+
+        grid-template-areas: 
+        "header header header header "
+        "content3 content4 content5 content6"
+        "footer footer footer footer";
+         
+    }
+
+    header{
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: 
+        "logo SideBar"
+        "banner banner";
+        grid-gap: 0.2rem;
+       
+    }
+
+
+#SideBar{
+
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+        "img1 img2 img3 img4 img5"
+        "SBT1 SBT2 SBT3 SBT4 SBT5"
+        ;
+    }
+
+    #SideBar img{
+
+        height: 90%;
+        width: 90%;
+    
+    }
+    
+    .SBT{
+        
+        font-size: 24px;
+        text-align: center;
+        place-self: start center;
+        padding: 2%;
+    
+    }
+    
+ 
+
+    
+
+    #content2{
+
+        display: none;
+    } 
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 701px){
+
+    .container{
+        overflow: scroll;
+        grid-template-columns: 100% ;
+        grid-template-rows:50% 40% 40% 40% 40% 40%;
+
+        grid-template-areas: 
+        "header"
+        "content3"
+        "content4"
+        "content5"
+        "content6"
+        "footer";
+         
+    }
+
+    header{
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 20% 70%;
+        grid-template-areas: 
+        "SideBar"
+        "logo"
+        "banner";
+        grid-gap: 0.2rem;
+       
+    }
+
+    #logo img {
+        width: 100%;
+        height: 100%;
+      }
+
+    #SideBar img{
+
+        display: none;
+
+    }
+
+    #SideBar{
+
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+        "SBT1 SBT2 SBT3 SBT4 SBT5"
+        ;
+    }
+
+    .SBT{
+        
+        font-size: 24px;
+        text-align: center;
+        place-self: center center;
+        padding: 2%;
+    
+    }
+    
+
+    
+
+
+
+
+}
+
+
+
+
