@@ -10,7 +10,7 @@ body {
 .container{
     display:grid;
     height:100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
     grid-template-rows: 50% 40% 10%;
     grid-template-areas: 
     "header header header header header"
@@ -22,11 +22,10 @@ body {
 
 header{
     display:grid;
-    height:100%;
+    height: 100%;
     grid-area: header;
-    border-radius: 20px;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 35% 65%;
+    grid-template-rows: 25% 75%;
     grid-template-areas: 
     "logo banner"
     "SideBar banner";
@@ -35,28 +34,55 @@ header{
 }
 
 
-
-
-
-
 #logo{
     grid-area: logo;
-
-
 }
 
 #Banner{
 
     background-color: rgb(10, 233, 95);
     grid-area: banner;
-
 }
-#Banner img {
+.containerNav {
+    margin: 20px;
+    width: 100%;
+    grid-area: banner;
+  }
+
+#bannerImg {
     width: 100%;
     height: 100%;
   }
 
+  .topnav {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
 
+  .topnav a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 20%;
+    text-align: center;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+
+
+  
+
+.textbody, .texttitle{
+
+    overflow: auto;
+}
 
 
 
@@ -234,7 +260,6 @@ header{
     .container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 50% 40% 10%;
-
         grid-template-areas: 
         "header header header header "
         "content3 content4 content5 content6"
@@ -244,13 +269,20 @@ header{
 
     header{
         grid-template-columns: 1fr 4fr;
-        grid-template-rows: 1fr 2fr;
+        grid-template-rows: 35% 65%;
         grid-template-areas: 
         "logo SideBar"
         "banner banner";
         grid-gap: 0.2rem;
        
     }
+
+
+    #Banner img {
+        width: 100%;
+        height: 100%;
+      }
+    
 
 
 #SideBar{
@@ -297,7 +329,7 @@ header{
 
 
 
-@media only screen and (max-width: 701px){
+@media only screen and (max-width: 700px){
 
     .container{
         overflow: scroll;
