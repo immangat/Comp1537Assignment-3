@@ -16,7 +16,7 @@ body {
     "header header header header header"
     "content2 content3 content4 content5 content6"
     "footer footer footer footer footer";
-    grid-gap: 0.2rem;
+    grid-gap: 0.7rem;
     text-align: center;
 }
 
@@ -40,7 +40,7 @@ header{
 
 #Banner{
 
-    background-color: rgb(10, 233, 95);
+
     grid-area: banner;
 }
 
@@ -50,10 +50,10 @@ header{
     grid-area: banner;
   }
 
-#bannerImg {
+#bannerImg img {
     width: 100%;
     height: 100%;
-    grid-area: banner;
+    border-radius: 20px;
   }
 
   .topnav {
@@ -81,9 +81,10 @@ header{
 
   
 
-.textbody, .texttitle{
+.textbody {
 
-    overflow: auto;
+    float:left;
+    padding:2%;
 }
 
 
@@ -98,7 +99,6 @@ header{
 #SideBar{
     display: grid;
     height: 100%;
-    background-color: rgb(105, 61, 134);
     grid-area: SideBar;
     grid-template-columns: 30% 70%;
     grid-template-rows: 20% 20% 20% 20% 20%;
@@ -110,6 +110,25 @@ header{
     "img5 SBT5";
 }
 
+
+#footerText{
+
+text-align :left;
+padding: 2%;
+}
+ 
+
+
+
+.cakeimgaes img{
+
+
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    
+   
+}
 
 #SideBar img{
 
@@ -208,42 +227,54 @@ header{
 
 
 
+.SideIcon img{
+
+    width: 20%;
+    height: 20%;
+    grid-area: content2;
+}
+
+
+#youtube{
+
+    place-self: center;
+    margin:35%;
+}
 
 
 
 #content2{
 
-    background-color: red;
     grid-area: content2;
 }
 
 #content3{
 
-    background-color: green;
+   
     grid-area: content3;
 }
 
 #content4{
 
-    background-color:orange;
+   
     grid-area: content4;
 }
 
 #content5{
 
-    background-color: pink;
+   
     grid-area: content5;
 }
 
 #content6{
 
-    background-color: yellow;
+    
     grid-area: content6;
 }
 
 #footer{
 
-    background-color: purple;
+
     grid-area: footer;
 }
 
@@ -336,7 +367,7 @@ header{
     .container{
         overflow: scroll;
         grid-template-columns: 100% ;
-        grid-template-rows:50% 40% 40% 40% 40% 40%;
+        grid-template-rows:50% 40% 40% 40% 40% 10%;
 
         grid-template-areas: 
         "header"
@@ -349,7 +380,7 @@ header{
     }
 
     header{
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         grid-template-rows: 10% 20% 70%;
         grid-template-areas: 
         "SideBar"
@@ -372,7 +403,7 @@ header{
 
     #SideBar{
 
-        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
         grid-template-rows: 100%;
         grid-template-areas: 
         "SBT1 SBT2 SBT3 SBT4 SBT5"
