@@ -1,46 +1,53 @@
 
+@import url(https://fonts.google.com/specimen/Roboto);
+
+
 body {
 
-
+    font-family:'Roboto' , sans-serif;
     margin: 2%;
 }
 
 
 
-.container{
-    display:grid;
-    height:100vh;
+
+
+.container {
+    display: grid;
+    height: 100vh;
     grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
     grid-template-rows: 50% 40% 10%;
     grid-template-areas: 
     "header header header header header"
     "content2 content3 content4 content5 content6"
     "footer footer footer footer footer";
-    grid-gap: 0.7rem;
+    grid-gap: 0.2rem;
     text-align: center;
 }
 
-header{
-    display:grid;
+header {
+    display: grid;
     height: 100%;
     grid-area: header;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 25% 75%;
-    grid-template-areas: 
-    "logo banner"
-    "SideBar banner";
+    grid-template-areas:
+        "logo banner"
+        "SideBar banner";
     grid-gap: 0.2rem;
-   
+
 }
 
 
-#logo{
+#logo {
     grid-area: logo;
 }
 
-#Banner{
+#Banner {
+    width: 100%;
+    height: 100%;
 
-
+    background-color: rgb(10, 233, 95);
     grid-area: banner;
 }
 
@@ -48,87 +55,64 @@ header{
     margin: 20px;
     width: 100%;
     grid-area: banner;
+}
+
+#bannerImg {
+    width: 100%;
+    height: 100%;
+    grid-area: banner;
   }
 
-#bannerImg img {
+figure>img {
     width: 100%;
     height: 100%;
     border-radius: 20px;
-  }
+    z-index: -1;
+}
 
-  .topnav {
-    width: 100%;
-    background-color: #555;
+
+
+
+
+
+
+.textbody, .texttitle{
+
     overflow: auto;
 }
 
-  .topnav a {
-    float: left;
-    padding: 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    width: 20%;
+figcaption {
+    background-color: rgba(79, 44, 16, 0.6);
+    height: 1.2em;
+    width: 100%;
+    margin-top: -2.4em;
+    float: right;
     text-align: center;
-  }
+    color: white;
+    z-index: 1;
+}
 
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-
-
-  
-
-.textbody {
-
-    float:left;
-    padding:2%;
+#logo>img {
+    width: 80%;
+    height: 80%;
 }
 
 
-
-#logo img {
-    width: 100%;
-    height: 100%;
-    align-items: left;
-  }
-
-
-#SideBar{
+#SideBar {
     display: grid;
     height: 100%;
+    background-color: rgb(105, 61, 134);
     grid-area: SideBar;
     grid-template-columns: 30% 70%;
     grid-template-rows: 20% 20% 20% 20% 20%;
-    grid-template-areas: 
-    "img1 SBT1"
-    "img2 SBT2"
-    "img3 SBT3"
-    "img4 SBT4"
-    "img5 SBT5";
+    grid-template-areas:
+        "img1 SBT1"
+        "img2 SBT2"
+        "img3 SBT3"
+        "img4 SBT4"
+        "img5 SBT5";
 }
 
-
-#footerText{
-
-text-align :left;
-padding: 2%;
-}
- 
-
-
-
-.cakeimgaes img{
-
-
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    
-   
-}
 
 #SideBar img{
 
@@ -137,8 +121,8 @@ padding: 2%;
 
 }
 
-.SBT{
-    
+.SBT {
+
     font-size: 24px;
     text-align: left;
     place-self: center start;
@@ -146,212 +130,200 @@ padding: 2%;
 
 }
 
-   #img1{
-        grid-area: img1;
-    }
+#img1 {
+    grid-area: img1;
+}
 
-    #img2{
-        grid-area: img2;
-    }
-
-
-    #img3{
-        grid-area: img3;
-    }
+#img2 {
+    grid-area: img2;
+}
 
 
-    #img4{
-        grid-area: img4;
-    }
+#img3 {
+    grid-area: img3;
+}
 
 
-    #img5{
-        grid-area: img5;
-    }
+#img4 {
+    grid-area: img4;
+}
 
 
-    #SBT1{
-        grid-area: SBT1;
-    }
-
-    #SBT2{
-        grid-area: SBT2;
-    }
+#img5 {
+    grid-area: img5;
+}
 
 
-    #SBT3{
-        grid-area: SBT3;
-    }
+#SBT1 {
+    grid-area: SBT1;
+}
+
+#SBT2 {
+    grid-area: SBT2;
+}
 
 
-    #SBT4{
-        grid-area: SBT4;
-    }
+#SBT3 {
+    grid-area: SBT3;
+}
 
 
-    #SBT5{
-        grid-area: SBT5;
-    }
+#SBT4 {
+    grid-area: SBT4;
+}
+
+
+#SBT5 {
+    grid-area: SBT5;
+}
 
 
 
-#NavC1{
+#NavC1 {
     grid-area: NavC1;
-    
+
 }
 
-#NavC2{
+#NavC2 {
     grid-area: NavC2;
-    
+
 }
 
 
-#NavC3{
+#NavC3 {
     grid-area: NavC3;
-   ;
+    ;
 
 }
 
 
-#NavC4{
+#NavC4 {
     grid-area: NavC4;
-    
+
 }
 
 
-#NavC5{
+#NavC5 {
     grid-area: NavC5;
-    
+
 }
 
 
 
 
-.SideIcon img{
 
-    width: 20%;
-    height: 20%;
+
+
+#content2 {
+
+    background-color: red;
     grid-area: content2;
 }
 
-
-#youtube{
-
-    place-self: center;
-    margin:35%;
-}
+#content3 {
 
 
-
-#content2{
-
-    grid-area: content2;
-}
-
-#content3{
-
-   
+    background-color: green;
     grid-area: content3;
 }
 
-#content4{
+#content4 {
 
-   
+
+    background-color:orange;
     grid-area: content4;
 }
 
-#content5{
+#content5 {
 
-   
+
+    background-color: pink;
     grid-area: content5;
 }
 
-#content6{
+#content6 {
 
-    
+
+    background-color: yellow;
     grid-area: content6;
 }
 
-#footer{
+#footer {
 
 
+    background-color: purple;
     grid-area: footer;
 }
 
-@media only screen and (min-width: 1281px) and (max-width: 1601px){
-
-
-
-
-}
+@media only screen and (min-width: 1281px) and (max-width: 1601px) {}
 
 
 
 
 
-@media only screen and (min-width: 701px) and (max-width: 1280px){
-    .container{
+@media only screen and (min-width: 701px) and (max-width: 1280px) {
+    .container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 50% 40% 10%;
-        grid-template-areas: 
-        "header header header header "
-        "content3 content4 content5 content6"
-        "footer footer footer footer";
-         
+        grid-template-areas:
+            "header header header header "
+            "content3 content4 content5 content6"
+            "footer footer footer footer";
+
     }
 
-    header{
+    header {
         grid-template-columns: 1fr 4fr;
         grid-template-rows: 35% 65%;
-        grid-template-areas: 
-        "logo SideBar"
-        "banner banner";
+        grid-template-areas:
+            "logo SideBar"
+            "banner banner";
         grid-gap: 0.2rem;
-       
+
     }
 
 
     #Banner img {
         width: 100%;
         height: 100%;
-      }
-    
+    }
 
 
-#SideBar{
+
+    #SideBar {
 
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 50% 50%;
-        grid-template-areas: 
-        "img1 img2 img3 img4 img5"
-        "SBT1 SBT2 SBT3 SBT4 SBT5"
+        grid-template-areas:
+            "img1 img2 img3 img4 img5"
+            "SBT1 SBT2 SBT3 SBT4 SBT5"
         ;
     }
 
-    #SideBar img{
+    #SideBar img {
 
         height: 90%;
         width: 90%;
-    
+
     }
-    
-    .SBT{
-        
+
+    .SBT {
+
         font-size: 24px;
         text-align: center;
         place-self: start center;
         padding: 2%;
-    
+
     }
-    
- 
 
-    
 
-    #content2{
+
+
+
+    #content2 {
 
         display: none;
-    } 
+    }
 
 }
 
@@ -362,71 +334,67 @@ padding: 2%;
 
 
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
 
-    .container{
+    .container {
         overflow: scroll;
         grid-template-columns: 100% ;
-        grid-template-rows:50% 40% 40% 40% 40% 10%;
+        grid-template-rows:50% 40% 40% 40% 40% 40%;
 
-        grid-template-areas: 
-        "header"
-        "content3"
-        "content4"
-        "content5"
-        "content6"
-        "footer";
-         
+        grid-template-areas:
+            "header"
+            "content3"
+            "content4"
+            "content5"
+            "content6"
+            "footer";
+
     }
 
     header{
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
         grid-template-rows: 10% 20% 70%;
-        grid-template-areas: 
-        "SideBar"
-        "logo"
-        "banner";
+        grid-template-areas:
+            "SideBar"
+            "logo"
+            "banner";
         grid-gap: 0.2rem;
-       
+
     }
 
     #logo img {
         width: 100%;
         height: 100%;
-      }
+    }
 
-    #SideBar img{
+    #SideBar img {
 
         display: none;
 
     }
 
-    #SideBar{
+    #SideBar {
 
-        grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+        grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 100%;
-        grid-template-areas: 
-        "SBT1 SBT2 SBT3 SBT4 SBT5"
+        grid-template-areas:
+            "SBT1 SBT2 SBT3 SBT4 SBT5"
         ;
     }
 
-    .SBT{
-        
+    .SBT {
+
         font-size: 24px;
         text-align: center;
         place-self: center center;
         padding: 2%;
-    
-    }
-    
 
-    
+    }
+
+
+
 
 
 
 
 }
-
-
-
-
